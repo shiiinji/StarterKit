@@ -22,6 +22,7 @@ server.js
 server.js.map
 tests/**/*.map
 tests/**/*.js
+!app/next.config.js
 
 # Others
 .tmp
