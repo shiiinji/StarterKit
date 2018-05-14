@@ -1,0 +1,29 @@
+# dependencies
+/node_modules
+npm-debug.log
+
+# testing
+/coverage
+
+/ Next.js build
+/app/.next
+
+# Ignores compiled TypeScript files
+app/**/*.map
+app/**/*.js
+shared/**/*.map
+shared/**/*.js
+server/**/*.map
+server/**/*.js
+server.js
+server.js.map
+tests/**/*.map
+tests/**/*.js
+
+# Others
+.tmp
+.idea
+.swp
+.env
+logs
+package-lock.json
