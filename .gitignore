@@ -5,8 +5,11 @@ npm-debug.log
 # testing
 /coverage
 
-/ Next.js build
+# Next.js build
 /app/.next
+
+# Workbox output files
+/static
 
 # Ignores compiled TypeScript files
 app/**/*.map

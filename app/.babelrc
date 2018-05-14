@@ -1,0 +1,37 @@
+{
+  "presets": [
+    [
+      "next/babel"
+    ]
+  ],
+  "plugins": [
+    [
+      "module-resolver", {
+      "alias": {
+        "styles": "./styles",
+        "next@routes/app": "../server/config/nextRoutes.js",
+        "actions@app": "./actions",
+        "components@app": "./components",
+        "containers@app": "./containers",
+        "constants@app": "./constants/index.ts",
+        "hocs@app": "./hocs",
+        "lib@app": "./lib",
+        "model@app": "./models",
+        "model@server": "../server/models/interfaces",
+        "reducers@app": "./reducers/index.ts",
+        "store@app": "./store/index.ts",
+        "styles@app": "./styles"
+      },
+      "cwd": "babelrc"
+    }
+    ]
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        ["env", { "modules": "commonjs" }],
+        "next/babel"
+      ]
+    }
+  }
+}

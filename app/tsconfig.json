@@ -1,0 +1,47 @@
+{
+  "extends": "../tsconfig.json",
+  "include": [
+    "./"
+  ],
+  "exclude": [
+    "../node_modules"
+  ],
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "esnext",
+    "allowJs": true,
+    "sourceMap": true,
+    "noEmit": true,
+    "baseUrl": "./",
+    "paths": {
+      "styles/*": ["styles/*"],
+      "staticProperties": ["../server/helpers/staticProperties.js"],
+      "next@routes/app": ["../server/config/nextRoutes.js"],
+      "actions@app/*": ["actions/*"],
+      "lib@app/*": ["lib/*"],
+      "components@app/*": ["components/*"],
+      "containers@app/*": ["containers/*"],
+      "constants@app": ["constants/index.ts"],
+      "hocs@app/*": ["hocs/*"],
+      "model@app/*": ["models/*"],
+      "model@server/*": ["../server/models/interfaces/*"],
+      "reducers@app": ["reducers/index.ts"],
+      "store@app": ["store/index.ts"],
+      "styles@app/*": ["styles/*"]
+    },
+    "typeRoots": [
+      "../node_modules/@types",
+      "../node_modules/jest-enzyme",
+      "../node_modules/jest-enzyme",
+      "../node_modules/next-routes/types",
+      "./types"
+    ],
+    "lib": [
+      "DOM",
+      "ES2015",
+      "ES2016",
+      "ES2017",
+      "ESNext"
+    ]
+  }
+}
