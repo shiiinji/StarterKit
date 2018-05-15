@@ -1,8 +1,8 @@
 import React from 'react';
 import Document, {Head, Main, NextScript} from 'next/document';
 import getPageContext from 'hocs@app/getPageContext';
-const ServiceWorker = require('next-workbox/service-worker');
-const Manifest = require('next-manifest/manifest');
+// const ServiceWorker = require('next-workbox/service-worker');
+// const Manifest = require('next-manifest/manifest');
 import {JssProvider} from 'react-jss';
 
 class MyDocument extends Document {
@@ -55,7 +55,7 @@ class MyDocument extends Document {
           <meta name="description" content="SNS analyzer for posto.jp" />
           <meta name="viewport" content="width=device-width,initial-scale=1" />
           <title>Starter Kit</title>
-          <Manifest themeColor="#000000" />
+          {/*<Manifest themeColor="#000000" />*/}
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
           <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
           <link
@@ -67,10 +67,10 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <ServiceWorker
-            src={'/static/workbox/sw.js'}
-            unregister={process.env.NODE_ENV !== 'production'}
-          />
+          {/*<ServiceWorker*/}
+            {/*src={'/static/workbox/sw.js'}*/}
+            {/*unregister={process.env.NODE_ENV !== 'production'}*/}
+          {/*/>*/}
         </body>
       </html>
     );
