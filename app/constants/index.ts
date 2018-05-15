@@ -1,4 +1,4 @@
-export const enum ActionTypes {
+export enum ActionTypes {
   OPEN_MESSAGETE_SNACBAR = 'OPEN_MESSAGETE_SNACBAR',
   CLOSE_MESSAGETE_SNACBAR = 'CLOSE_MESSAGETE_SNACBAR'
 

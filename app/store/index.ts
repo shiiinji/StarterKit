@@ -3,7 +3,7 @@ import Redux, {createStore, applyMiddleware} from 'redux';
 import {composeWithDevTools} from 'redux-devtools-extension/developmentOnly';
 import thunk from 'redux-thunk';
 import {IStore} from 'model@app/store';
-import reducers from 'reducers@app';
+import {reducers} from 'reducers@app';
 
 /*
  * @param {Object} initial state to bootstrap our stores with for server-side rendering

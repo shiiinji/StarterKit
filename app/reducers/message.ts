@@ -4,7 +4,7 @@ import {IMessageReducer} from 'model@app/message';
 
 export const initialState: IMessageReducer = {
   open: false,
-  message: '',
+  message: 'Welcome Home',
 };
 
 const message = (state: IMessageReducer = initialState, action: IMessageAction) => {

@@ -1,22 +1,22 @@
 {
-  "compileOnSave": false,
   "include": [
-    "./server",
-    "server.ts"
+    "app"
   ],
   "exclude": [
-    "./node_modules",
-    "./app",
-    "./tests",
-    "./server/**/__tests__/*.ts"
+    "node_modules",
+    "server",
+    "tests",
+    "app/**/__tests__/*.ts"
   ],
   "compilerOptions": {
-    "target": "es2017",
-    "module": "commonjs",
+    "module": "esnext",
+    "target": "esnext",
+    "allowJs": true,
+    "sourceMap": true,
+    "noEmit": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
-    "allowJs": false,
-    "jsx": "react",
+    "jsx": "preserve",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "alwaysStrict": true,
@@ -27,20 +27,39 @@
     "noUnusedParameters": true,
     "removeComments": false,
     "preserveConstEnums": true,
-    "sourceMap": true,
     "types" : ["node", "jest"],
     "skipLibCheck": true,
     "strict": true,
     "pretty": true,
+    "baseUrl": "./app",
+    "paths": {
+      "staticProperties": ["../server/helpers/staticProperties.js"],
+      "next@routes/app": ["../server/config/nextRoutes.js"],
+      "actions@app/*": ["actions/*"],
+      "lib@app/*": ["lib/*"],
+      "components@app/*": ["components/*"],
+      "containers@app/*": ["containers/*"],
+      "constants@app": ["constants/index.ts"],
+      "hocs@app/*": ["hocs/*"],
+      "model@app/*": ["models/*"],
+      "model@server/*": ["../server/models/interfaces/*"],
+      "reducers@app": ["reducers/index.ts"],
+      "store@app": ["store/index.ts"],
+      "styles@app/*": ["styles/*"]
+    },
     "typeRoots": [
       "./node_modules/@types",
-      "./node_modules/jest-enzyme"
+      "./node_modules/jest-enzyme",
+      "./node_modules/jest-enzyme",
+      "./node_modules/next-routes/types",
+      "./types"
     ],
     "lib": [
       "DOM",
       "ES2015",
       "ES2016",
-      "ES2017"
+      "ES2017",
+      "ESNext"
     ]
   }
 }
