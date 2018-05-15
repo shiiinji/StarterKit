@@ -5,9 +5,9 @@ import {IMessageReducer} from 'model@app/message';
 import {IStore} from 'model@app/store';
 
 // Add message prop for Home-test.tsx's example testing
-// interface DispatchProps {
-//   message: IMessageReducer;
-// }
+interface DispatchProps {
+  message: IMessageReducer;
+}
 
 class Home extends React.Component<DispatchProps> {
   constructor(props: any) {
@@ -15,8 +15,8 @@ class Home extends React.Component<DispatchProps> {
   }
 
   render() {
-    // const {message} = this.props.message;
-    return <div data-test="welcome">message</div>;
+    const {message} = this.props.message;
+    return <div data-test="welcome">{message}</div>;
   }
 }
 
@@ -26,4 +26,4 @@ function mapStateToProps(state: IStore) {
   };
 }
 
-export default Home;
+export default connect(mapStateToProps)(Home);

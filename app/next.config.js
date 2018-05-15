@@ -15,13 +15,13 @@ const typescriptOptions = {
 module.exports = withPlugins(
   [
     [withAwesomeTypescript, typescriptOptions],
-    withWorkbox,
-    [withManifest, {
-      manifest: {
-        icons: {
-          src: './assets/icon-512x512.png',
-          cache: true,
-        },
-      }
-    }]
+    // withWorkbox,
+    // [withManifest, {
+    //   manifest: {
+    //     icons: {
+    //       src: './assets/icon-512x512.png',
+    //       cache: true,
+    //     },
+    //   }
+    // }]
 ]);
