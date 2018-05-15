@@ -1,5 +1,4 @@
 // next.config.js
-const withAwesomeTypescript = require('next-awesome-typescript');
 const withManifest = require('next-manifest');
 const withPlugins = require("next-compose-plugins");
 const withWorkbox = require('next-workbox');
