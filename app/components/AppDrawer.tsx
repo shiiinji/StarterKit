@@ -30,7 +30,7 @@ class AppDrawer extends React.Component<StateProps> {
           <AppBar className={classNames(classes.appBar, classes[`appBar-left`])}>
             <Toolbar>
               <Typography variant="title" color="inherit" noWrap={true}>
-                posto.jp
+                Starter kit
               </Typography>
             </Toolbar>
           </AppBar>
@@ -45,7 +45,7 @@ class AppDrawer extends React.Component<StateProps> {
                 <Button>
                   <Link route="/">
                     <Typography variant="button" gutterBottom={true} color="inherit">
-                      hash.posto.jp
+                      Menu
                     </Typography>
                   </Link>
                 </Button>
@@ -53,7 +53,7 @@ class AppDrawer extends React.Component<StateProps> {
             </div>
             <Divider />
             <List>
-              <List subheader={<ListSubheader>Media analyzer</ListSubheader>}>
+              <List subheader={<ListSubheader>Menu1</ListSubheader>}>
                 <ListItem button={true}>
                   <Link route={`/media/create`}>
                     <ListItemText primary="Create" />
@@ -68,7 +68,7 @@ class AppDrawer extends React.Component<StateProps> {
                 <Divider />
               </List>
 
-              <List subheader={<ListSubheader>Hash tags analyzer</ListSubheader>}>
+              <List subheader={<ListSubheader>Menu2</ListSubheader>}>
                 <ListItem button={true}>
                   <Link route={`/hashtag/create`}>
                     <ListItemText primary="Create" />
@@ -82,7 +82,7 @@ class AppDrawer extends React.Component<StateProps> {
                 <Divider />
               </List>
 
-              <List subheader={<ListSubheader>Settings</ListSubheader>}>
+              <List subheader={<ListSubheader>Menu3</ListSubheader>}>
                 <ListItem button={true}>
                   <Link route={`/settings/account_edit`}>
                     <ListItemText primary="Account" />
