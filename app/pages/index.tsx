@@ -1,4 +1,6 @@
+import React from 'react';
 import Home from 'containers@app/home/Home';
-import page from 'hocs@app/page';
 
-export default page(Home, 'index');
+export default () => {
+  return (<Home />);
+}

@@ -23,6 +23,8 @@ server.js.map
 tests/**/*.map
 tests/**/*.js
 !app/next.config.js
+!app/hocs/withRedux.js
+!app/pages/_app.js
 
 # Others
 .tmp
