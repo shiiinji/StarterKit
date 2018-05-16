@@ -1,9 +1,13 @@
+import React from 'react';
 import App, {Container} from "next/app";
 import {Provider} from "react-redux";
 import withRedux from "hocs@app/withRedux";
 import initStore from 'store@app';
 import axios from 'axios';
 
+import CssBaseline from '@material-ui/core/CssBaseline';
+import {withStyles, MuiThemeProvider, createMuiTheme} from '@material-ui/core/styles';
+import getPageContext from '../hocs/getPageContext';
 
 /**
  * @param {object} initialState
@@ -14,7 +18,28 @@ import axios from 'axios';
  * @param {string} options.storeKey This key will be used to preserve store in global namespace for safe HMR
  */
 
+const muiTheme = {
+  palette: {},
+};
+const styles = (_theme) => ({
+  '@global': {
+    html: {
+      background: '#fff',
+      WebkitFontSmoothing: 'antialiased', // Antialiasing.
+      MozOsxFontSmoothing: 'grayscale', // Antialiasing.
+    },
+    body: {
+      margin: 0,
+    },
+  },
+});
+
+let AppWrapper= (props) => props.children;
+AppWrapper = withStyles(styles)(AppWrapper);
+
 class MyApp extends App {
+
+  pageContext = null;
 
   static async getInitialProps({Component, ctx}) {
     const {req, res, store} = ctx;
@@ -31,12 +56,38 @@ class MyApp extends App {
 
   }
 
+  componentWillMount() {
+    try {
+      this.pageContext = this.props.pageContext || getPageContext();
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  componentDidMount() {
+    try {
+      const jssStyles = document.querySelector('#jss-server-side');
+      if (jssStyles && jssStyles.parentNode) {
+        jssStyles.parentNode.removeChild(jssStyles);
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+
   render() {
     const {Component, pageProps, store} = this.props;
     return (
       <Container>
         <Provider store={store}>
+          <MuiThemeProvider
+            theme={createMuiTheme({...muiTheme})}
+            sheetsManager={this.pageContext.sheetsManager}>
+            <AppWrapper>
           <Component {...pageProps} />
+            </AppWrapper>
+          </MuiThemeProvider>
         </Provider>
       </Container>
     );

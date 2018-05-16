@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {Fragment} from 'react';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import AppDrawer from 'components@app/organisms/AppDrawer/index';
 import Home from 'containers@app/template/Home/index';
 
 
@@ -14,7 +16,12 @@ class HomePage extends React.Component {
 
   render() {
     return (
-      <Home />
+      <Fragment>
+        <CssBaseline />
+        <AppDrawer>
+          <Home />
+        </AppDrawer>
+      </Fragment>
     )
   }
 }
