@@ -1,6 +1,6 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import Home from '../Home';
+import Home from '../index';
 import configureStore from 'redux-mock-store';
 
 const middlewares: any = [];
