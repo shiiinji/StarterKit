@@ -9,7 +9,7 @@
   "scripts": {
     "ts:server": "tsc --p tsconfig.server.json",
     "ts:app-check": "tsc --p ./tsconfig.json --noEmit",
-    "dev": "npm-run-all --parallel development ts:app-check",
+    "dev": "npm-run-all --parallel dev:only ts:app-check",
     "dev:only": "node server.js",
     "build": "npm run ts:app-check && next build app",
     "watch:app": "tsc --p ./tsconfig.json --noEmit --watch",
@@ -138,7 +138,7 @@
     "tslint-config-airbnb": "^5.8.0",
     "tslint-config-prettier": "^1.12.0",
     "tslint-react": "^3.5.1",
-    "typesafe-actions": "^1.2.0-rc.4",
+    "typesafe-actions": "^2.0.0-1",
     "typescript": "^2.8.1"
   }
 }
