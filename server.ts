@@ -14,7 +14,7 @@ import {restRoutes} from './server/config/restRoutes';
 
 const startServer = async (): Promise<void> => {
   const app = express();
-  const {port, baseURL} = process.env;
+  const {PORT, BASEURL} = process.env;
   const dir = resolve('./app');
   const dev = process.env.NODE_ENV !== 'production';
   const nextApp = next({dev, dir});
@@ -50,11 +50,11 @@ const startServer = async (): Promise<void> => {
   // Debug code
   process.on('unhandledRejection', console.dir);
 
-  app.listen(port, (error: object) => {
+  app.listen(PORT, (error: object) => {
     if (error) {
       console.error(error);
     } else {
-      console.info(`==> Listening on port %s. Open up ${baseURL}/ in your browser.`, port);
+      console.info(`==> Listening on port %s. Open up ${BASEURL}/ in your browser.`, PORT);
     }
   });
 };
