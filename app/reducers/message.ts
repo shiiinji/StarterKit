@@ -13,7 +13,7 @@ const message = (state: IMessageReducer = initialState, action: IMessageAction) 
       return {
         ...state,
         open: true,
-        message: action.message,
+        message: action.payload,
       };
     }
 

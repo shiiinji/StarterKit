@@ -3,11 +3,10 @@ import {ActionTypes} from 'constants@app';
 
 export const actions = {
   handleMessageOpen: createAction(ActionTypes.OPEN_MESSAGETE_SNACBAR, (message: string) => ({
-    message,
+    payload: message,
     type: ActionTypes.OPEN_MESSAGETE_SNACBAR,
   })),
-  handleMessageClose: createAction(ActionTypes.CLOSE_MESSAGETE_SNACBAR, (message?: string) => ({
-    message,
+  handleMessageClose: createAction(ActionTypes.CLOSE_MESSAGETE_SNACBAR, () => ({
     type: ActionTypes.CLOSE_MESSAGETE_SNACBAR,
   })),
 };
