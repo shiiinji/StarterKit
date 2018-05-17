@@ -17,6 +17,7 @@
     "start": "NODE_ENV=production node server.js",
     "debug": "NODE_ENV=production node --inspect server.js",
     "test": "jest --config jest.config.js",
+    "test-e2e": "jest --config jest.e2e.config.js",
     "test:watch": "npm test -- --watch",
     "lint:server": "tslint -c tslint.json -t stylish -p ./tsconfig.server.json",
     "lint:client": "tslint -c tslint.json -t stylish -p ./tsconfig.json",

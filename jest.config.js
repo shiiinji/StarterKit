@@ -7,6 +7,6 @@ module.exports = {
   moduleNameMapper: {
     '.*\\.(css|scss)$': 'test/styleMock.ts',
   },
-  testPathIgnorePatterns: ['node_modules/', './test/e2e/', './test/integration/'],
-  setupFiles: ['./test/setupMongoose.ts', './test/setupEnzymeAdapter.tsx'],
+  testPathIgnorePatterns: ['node_modules/', './tests/e2e/', './tests/integration/'],
+  setupFiles: ['./tests/setupMongoose.ts', './tests/setupEnzymeAdapter.tsx'],
 };
