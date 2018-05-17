@@ -50,7 +50,6 @@
     "typeRoots": [
       "./node_modules/@types",
       "./node_modules/jest-enzyme",
-      "./node_modules/jest-enzyme",
       "./node_modules/next-routes/types",
       "./types"
     ],
