@@ -34,7 +34,7 @@
   "author": "shinji <shinji.toys@gmail.com>",
   "license": "MIT",
   "lint-staged": {
-    "*.{ts, tsx}": [
+    "*.ts{,x}": [
       "npm run prettier",
       "npm run lint:precommit",
       "git add"
