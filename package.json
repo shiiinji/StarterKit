@@ -7,6 +7,7 @@
     "node": "8.x"
   },
   "scripts": {
+    "precommit": "lint-staged",
     "ts:server": "tsc --p tsconfig.server.json",
     "ts:app-check": "tsc --p ./tsconfig.json --noEmit",
     "dev": "npm-run-all --parallel dev:only ts:app-check",
